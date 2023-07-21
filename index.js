@@ -1,29 +1,37 @@
-import "billboard.js/dist/billboard.css";
-import bb from "billboard.js";
+import 'billboard.js/dist/billboard.css';
+import bb from 'billboard.js';
 
 var chart = bb.generate({
+  title: {
+    text: 'Top Mua Ròng',
+  },
   data: {
-    x: "x",
+    x: 'x',
     columns: [
-	    ["x", 'A', 'B', 'C', 'D', 'E', 'F'],
-	    ["data1", 30, 200, 100, 400, 150, 250]
+      ['x', 'A', 'B', 'C', 'D', 'E', 'F'],
+      ['data1', 30, 200, 100, 400, 150, 250],
     ],
     types: {
-      data1: "bar"
+      data1: 'bar',
     },
-    labels: true
+    labels: true,
   },
   axis: {
     rotated: true,
     x: {
-      type: "category"
+      type: 'category',
     },
     y: {
-      show: false
-    }
+      show: false,
+    },
   },
   legend: {
-    show: false
+    show: false,
   },
-  bindto: "#rotatedAxis"
+  grid: {
+    y: {
+      show: true,
+    },
+  },
+  bindto: '#rotatedAxis',
 });
